@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d7de9388-8c8a-4e57-9a89-5264e0594cf8">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from bill]]>
+	</queryString>
+	<field name="jno" class="java.lang.String"/>
+	<field name="totbill" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="108" y="0" width="237" height="53" uuid="2a203cff-7534-4096-992d-fe1e8f8d9d6d"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Monthly Income]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="58" y="2" width="100" height="20" uuid="ea357aa2-2df3-4e0c-8cac-fcf2f22acffd"/>
+				<text><![CDATA[Job Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="326" y="2" width="100" height="20" uuid="e011fdf0-b80c-47aa-aa35-ff4480acb3af"/>
+				<text><![CDATA[Total Bill]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="58" y="22" width="100" height="20" uuid="fa09460d-411e-4172-9e90-921f22010153"/>
+				<textFieldExpression><![CDATA[$F{jno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="326" y="24" width="100" height="20" uuid="a3b2efa1-d8ca-4087-b00d-223a27fe2045"/>
+				<textFieldExpression><![CDATA[$F{totbill}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
